@@ -1,0 +1,87 @@
+% Common header => These packages are almost always used, so why not always import them and not think about it
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{soul}
+\usepackage[longnamesfirst,sort]{natbib}
+\bibpunct[, ]{(}{)}{;}{a}{,}{,}% Citation support using natbib.sty
+\renewcommand\bibfont{\fontsize{10}{12}\selectfont}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[hidelinks]{hyperref}
+\usepackage[all]{nowidow}
+\newcommand{\rref}[2][\!\!]{\hyperref[#2]{#1~\ref{#2}}}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{lmodern}
+
+% Uncomment the following for special packages
+% \usepackage[printwatermark]{xwatermark}
+% \newwatermark[allpages,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
+\usepackage[french]{babel}
+
+% Revision tools => These commands (\comment, \commentbox, \addref and \xx) are used for revising a document and leave some comments
+\usepackage{xspace} 
+\newcommand\comment[2]{\hl{#1}\xspace}
+\newcommand\commentbox[1]{
+\vspace{12pt}
+
+\fbox{\begin{minipage}[c]{.90\textwidth}Commentaire: #1\end{minipage}}
+
+\vspace{12pt}
+}
+\newcommand\addref{\hl{REF}\xspace}
+\newcommand\xx{\comment{XX}}
+
+% Specific packages => Put any package that are specific to the current LaTeX file here
+
+
+
+% Header => This highly depends on the template you use
+\title{Tutoriel des Guerriers : Utilisation de \LaTeX}
+\author{Pariterre}
+\date{Février 2021}
+
+% This is usually what would be used for submitting a paper
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{lineno}
+\linenumbers
+
+% My functions => Put any functions you create here
+
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+  Mettre l'abstract ici. 
+  Tout les textes sont générés grâce au fameux \url{https://lorembarnak.com/}.
+  Câline de sapristi de cossin de saint-sacrament.
+  Enfant d'chienne de colon de batèche de cossin.
+  Sacristi de cimonaque de cibole de verrat.
+  Viande à chien de câline de crucifix de calvaire.
+\end{abstract}
+Keywords: Tutoriel, \LaTeX, Le Scientifique du Lundi
+
+\tableofcontents
+
+
+\newpage
+% Section d'introduction
+\input{Introduction/Premier barnak}
+
+% Section de discussion
+\input{Discussion/Second barnak}
+
+% Section de conclusion
+\input{Conclusion/Dernier barnak} 
+
+\bibliographystyle{plainnat}
+\bibliography{bibliographie}
+
+\end{document}
